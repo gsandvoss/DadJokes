@@ -13,6 +13,10 @@
 		D9C0C8A7265D347300CB2376 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C0C8A6265D347300CB2376 /* Preview Assets.xcassets */; };
 		D9C0C8A9265D347300CB2376 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C8A8265D347300CB2376 /* Persistence.swift */; };
 		D9C0C8AC265D347300CB2376 /* DadJokes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C8AA265D347300CB2376 /* DadJokes.xcdatamodeld */; };
+		D9C0C8B4265E783500CB2376 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C8B3265E783500CB2376 /* EmojiView.swift */; };
+		D9C0C8B7265FCAF600CB2376 /* Jokes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C8B5265FCAF600CB2376 /* Jokes+CoreDataClass.swift */; };
+		D9C0C8B8265FCAF600CB2376 /* Jokes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C8B6265FCAF600CB2376 /* Jokes+CoreDataProperties.swift */; };
+		D9C0C8BA265FD14800CB2376 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C8B9265FD14800CB2376 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		D9C0C8A8265D347300CB2376 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D9C0C8AB265D347300CB2376 /* DadJokes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DadJokes.xcdatamodel; sourceTree = "<group>"; };
 		D9C0C8AD265D347300CB2376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C0C8B3265E783500CB2376 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		D9C0C8B5265FCAF600CB2376 /* Jokes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jokes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D9C0C8B6265FCAF600CB2376 /* Jokes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jokes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D9C0C8B9265FD14800CB2376 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +64,17 @@
 		D9C0C89E265D347200CB2376 /* DadJokes */ = {
 			isa = PBXGroup;
 			children = (
+				D9C0C8B5265FCAF600CB2376 /* Jokes+CoreDataClass.swift */,
+				D9C0C8B6265FCAF600CB2376 /* Jokes+CoreDataProperties.swift */,
 				D9C0C89F265D347200CB2376 /* DadJokesApp.swift */,
 				D9C0C8A1265D347200CB2376 /* ContentView.swift */,
+				D9C0C8B3265E783500CB2376 /* EmojiView.swift */,
 				D9C0C8A3265D347300CB2376 /* Assets.xcassets */,
 				D9C0C8A8265D347300CB2376 /* Persistence.swift */,
 				D9C0C8AD265D347300CB2376 /* Info.plist */,
 				D9C0C8AA265D347300CB2376 /* DadJokes.xcdatamodeld */,
 				D9C0C8A5265D347300CB2376 /* Preview Content */,
+				D9C0C8B9265FD14800CB2376 /* AddView.swift */,
 			);
 			path = DadJokes;
 			sourceTree = "<group>";
@@ -144,10 +156,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C0C8B8265FCAF600CB2376 /* Jokes+CoreDataProperties.swift in Sources */,
+				D9C0C8B7265FCAF600CB2376 /* Jokes+CoreDataClass.swift in Sources */,
 				D9C0C8A9265D347300CB2376 /* Persistence.swift in Sources */,
 				D9C0C8A2265D347200CB2376 /* ContentView.swift in Sources */,
+				D9C0C8BA265FD14800CB2376 /* AddView.swift in Sources */,
 				D9C0C8AC265D347300CB2376 /* DadJokes.xcdatamodeld in Sources */,
 				D9C0C8A0265D347200CB2376 /* DadJokesApp.swift in Sources */,
+				D9C0C8B4265E783500CB2376 /* EmojiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
