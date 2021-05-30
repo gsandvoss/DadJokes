@@ -19,36 +19,45 @@ import CoreData
             
             
             var body: some View {
-                NavigationView {
-                    List{
-                        ForEach(jokes, id: \.setup) { joke in
-                            NavigationLink(destination:
-                              Text(joke.punchline)) {
-                                EmojiView(for: joke.rating)
-                                Text(joke.setup)
+                
+                ZStack (alignment: .top){
+                    LinearGradient(gradient: Gradient(colors: [Color("Start"), Color("Middle"), Color("End")]), startPoint: .top, endPoint: .bottom)
+                    
+                    ScrollView(.horizontal, showsIndicators:false) {
+                        HStack(spacing:10) {
+                            ForEach(jokes, id: \.setup) { joke in
+                                JokeCard(joke: joke)
+                            }
+                            .padding(60)
+                        }
                     }
-                }
-                        .onDelete(perform: removeJokes)
-                        
-            }.navigationBarTitle("All Groan Up")
-                    .navigationBarItems(leading: EditButton(), trailing: Button("Add") {
+                    
+                    Button("Add Joke"){
                         self.showingAddJoke.toggle()
-                    })
-                    .sheet(isPresented: $showingAddJoke) {
+                    }
+                    .padding()
+                    .background(Color.black.opacity(0.5))
+                    .clipShape(Capsule())
+                    .foregroundColor(.white)
+                    .offset(y: 50)
+
+                }
+                .edgesIgnoringSafeArea(.all)
+                .sheet(isPresented: $showingAddJoke) {
                         AddView().environment(\.managedObjectContext, self.moc)
             }
         }
     }
-            func removeJokes(at offsets: IndexSet) {
-                for index in offsets {
-                    let joke = jokes[index]
-                    moc.delete(joke)
-                }
-            }
+           // func removeJokes(at offsets: IndexSet) {
+               // for index in offsets {
+                //    let joke = jokes[index]
+                 //   moc.delete(joke)
+           //     }
+        //    }
  
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }
-}
+
