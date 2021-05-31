@@ -46,8 +46,10 @@ struct JokeCard: View {
                 EmojiView(for: joke.rating)
                     .font(.system(size: 72))
         }
-        .frame(minHeight: 0, maxHeight: .infinity)
-        .frame(width: 300)
+        .padding(.top, 200 )
+        .frame(minHeight: 0, maxHeight: 500)
+        .frame(width: 300.0)
+        .frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         .offset(y: dragAmount.height)
         .gesture(
             DragGesture()
